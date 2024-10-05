@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrenador</title>
+    <link rel="stylesheet" href="../CSS/admin.css">
+    <link rel="stylesheet" href="../css/entrenador.css">
+
+</head>
+
+<body>
+    <header>
+        <h2 id="actividad"></h2>
+        <h1>Centro Deportivo de Barranquilla</h1>
+        <div class="welcome-message" id="welcome"></div>
+    </header>
+
+    <div class="menu">
+        <button onclick="showOption(1)">Inicio</button>
+        <button onclick="showOption(2)">Ver Inscripciones</button>
+        <button onclick="showOption(3)">Gestion Inscripciones</button>
+        <button onclick="showOption(4)">Ver eventos</button>
+         <button onclick="showOption(5)">Gestion eventos</button>
+        <button onclick="cerrarSesion()">Cerrar sesion</button>
+    </div>
+
+    <div class="content">
+        <!-- inicio-->
+        <input type="hidden" id="NameActividad" name="NameActividad">
+        <div class="items" id="option1">
+            <h1>Panel de Entrenador</h1>
+            <p>¡Hola, Entrenador! Este es tu panel de control donde podrás gestionar todas las actividades relacionadas
+                con tu
+                curso.</p>
+
+            <p>Desde aquí, podrás:</p>
+            <ul>
+                <li>Agregar, editar y eliminar actividades de entrenamiento.</li>
+                <li>Ver la lista de estudiantes inscritos en tus actividades.</li>
+                <li>Realizar un seguimiento del desempeño de cada estudiante durante las actividades.</li>
+                <li>Actualizar información sobre el progreso de tus entrenamientos.</li>
+            </ul>
+
+            <p>Recuerda revisar las estadísticas y comentarios de los estudiantes para mejorar tus sesiones y adaptarlas
+                a sus
+                necesidades.</p>
+
+            <button onclick="VerNovedades()" id="btnVerNovedades" class="btn">Ver Novedades</button>
+
+            <div id="novedadesEntrenador" style="display: none;">
+                <h2>Novedades de la Actividad</h2>
+                <ul id="listaNovedades">
+                    <!-- Aquí se llenarán las novedades -->
+                </ul>
+            </div>
+        </div>
+        <!-- ver inscripciones cargadas del json -->
+        <div class="items" id="option2" style="display:none;">
+            <h1>Inscripciones en Actividad: <span id="actividadNombre"></span></h1>
+            <table id="inscripcionesTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Aquí se llenarán las filas de la tabla -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="option3" class="items" style="display:none">
+            <h1>Agregar Inscripción</h1>
+
+            <!-- Formulario para agregar una nueva inscripción -->
+            <form id="inscripcionForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre">
+
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" required placeholder="Ingresa tu correo">
+
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+
+                <button type="button" onclick="AgregarInscripcionEntrenador()">Agregar Inscripción</button>
+            </form>
+
+            <div>
+                <h2>Inscripciones</h2>
+                <label for="numeroInscripciones">Elige cuántas inscripciones mostrar:</label>
+                <select id="numeroInscripciones">
+                    <option value="5">Últimas 5 inscripciones</option>
+                    <option value="10">Últimas 10 inscripciones</option>
+                </select>
+                <button onclick="verInscripciones()">Mostrar Inscripciones</button>
+
+                <ul id="listaInscripciones">
+                    <!-- Aquí se llenarán las inscripciones -->
+                </ul>
+            </div>
+        </div>
+
+        <div id="option4" class="items" style="display:none;">
+             <h1>Eventos en Actividad: <span id="actividadNombre"></span></h1>
+            <table id="EventosTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Ubicacion</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBodyEvent">
+                    <!-- Aquí se llenarán las filas de la tabla -->
+                </tbody>
+            </table>
+        </div>
+
+    <div class="items" id="option5" style="display:none;">
+        <h1>Agregar Evento</h1>
+    
+        <!-- Formulario para agregar un nuevo evento -->
+        <form id="eventoForm">
+            <label for="event-name">Nombre del Evento:</label>
+            <input type="text" id="event-name" name="event-name" required placeholder="Ingrese el nombre del evento">
+    
+            <label for="event-date">Fecha del Evento:</label>
+            <input type="date" id="event-date" name="event-date" required>
+    
+            <label for="event-time">Hora del Evento:</label>
+            <input type="time" id="event-time" name="event-time" required>
+    
+            <label for="event-location">Ubicación del Evento:</label>
+            <input type="text" id="event-location" name="event-location" required
+                placeholder="Ingrese la ubicación del evento">
+    
+            <button type="button" onclick="agregarEvento()">Agregar Evento</button>
+        </form>
+    
+        <div>
+            <h2>Eventos</h2>
+            <label for="numeroEventos">Elige cuántos eventos mostrar:</label>
+            <select id="numeroEventos">
+                <option value="5">Últimos 5 eventos</option>
+                <option value="10">Últimos 10 eventos</option>
+            </select>
+            <button onclick="verEventos()">Mostrar Eventos</button>
+    
+            <ul id="listaEventos">
+                <!-- Aquí se llenarán los eventos -->
+            </ul>
+        </div>
+    </div>
+
+    <footer class="pie">
+        <p>Desarrollado por <b>Anderson Lopez Y Maryeris Labiosa</b> | &copy; 2024 Institución Universitaria de
+            Barranquilla.
+            Todos los
+            derechos reservados.</p>
+    </footer>
+    <script src="../JS/entrenador.js"></script>
+</body>
+
+</html>

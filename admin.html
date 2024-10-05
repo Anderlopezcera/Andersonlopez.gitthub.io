@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <link rel="stylesheet" href="../CSS/admin.css">
+</head>
+
+<body>
+    <header>
+        <h2>Administrador</h2>
+        <h1>Institución Universitaria de Barranquilla</h1>
+          <div class="welcome-message" id="welcome"></div>
+    </header>
+
+    <div class="menu">
+        <button onclick="showOption(1)">Inicio</button>
+        <button onclick="showOption(2)">Eventos</button>
+        <button onclick="showOption(3)">Detalles Eventos</button>
+        <button onclick="showOption(4)">inscripciones</button>
+        <button onclick="showOption(5)">Detalles Inscripciones</button>
+        <button onclick="showOption(6)">¿como administrar?</button>
+        <button onclick="cerrarSesion()">Cerrar sesion</button>
+    </div>
+
+    <div class="content">
+        <!--seccion inicio-->
+        <div class="items" id="option1">
+            <h1>Panel de Control</h1>
+            <p>¡Hola, Administrador! Este es tu panel de control donde podrás gestionar todas las actividades de la institución.
+            </p>
+        
+            <p>Desde aquí, podrás:</p>
+            <ul>
+                <li>Agregar, editar y eliminar eventos.</li>
+                <li>Ver la lista de usuarios inscritos en las actividades.</li>
+                <li>Realizar un seguimiento del desempeño de cada evento.</li>
+                <li>Administrar las inscripciones de los estudiantes y mantener actualizada la base de datos.</li>
+            </ul>
+        
+            <p>Recuerda revisar las estadísticas y reportes de participación para mejorar nuestras actividades y adaptarlas a
+                las necesidades de los estudiantes.</p>
+        </div>
+
+         <!--  seccion agregar evento -->
+        <div class="items" id="option2" style="display:none;">
+            <div id="event-form">
+                <h4>Agregar Evento</h4>
+                <!-- Campo para la fecha -->
+                <div class="form-group">
+                    <label for="event-date">Fecha:</label>
+                    <input type="date" id="event-date" class="form-control" >
+                </div>
+                <!-- Campo para la hora -->
+                <div class="form-group">
+                    <label for="event-time">Hora:</label>
+                    <input type="time" id="event-time" class="form-control" >
+                </div>
+                <!-- Campo para el nombre del evento -->
+                <div class="form-group">
+                    <label for="event-name">Nombre del evento:</label>
+                    <input type="text" id="event-name" class="form-control" placeholder="Ingrese el nombre del evento">
+                </div>
+                <div class="form-group">
+                    <label for="event-name">Ubicacion:</label>
+                    <input type="text" id="event-ubicacion" class="form-control" placeholder="Ingrese la ubicacion del evento" >
+                </div>
+                <!-- Select para elegir entre Música o Fútbol -->
+                <div class="form-group">
+                    <label for="event-activity">Actividad:</label>
+                    <select id="event-activity" class="form-control">
+                        <option value="" disabled selected>Seleccione una actividad</option>
+                        <option value="musica">Música</option>
+                        <option value="futbol">Fútbol</option>
+                    </select>
+                </div>
+                <button onclick="AgregarEvento()" class="btn">Agregar Evento</button>
+            </div>
+              <h3>Ultimos 3 eventos agregados </h3>
+            <div id="MostrarUltimosEventos"></div>
+            <button id="Mostrar" class="btn" type="button" onclick="MostrarUltimosEventos()">Mostrar Ultimos Eventos</button>
+        </div>
+         <!-- Seccion para cargar los eventos del json-->
+        <div class="items" id="option3" style="display:none;">
+            <h3>Detalles eventos</h3>
+            <table id="event-table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Nombre</th>
+                        <th>Ubicación</th>
+                        <th>Actividad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+          <!-- Seccion para agregar inscripciones a las actividades-->
+        <div class="items" id="option4" style="display:none;">
+            <div id="form-container">
+                <h4>Agrege una inscripciones</h4>
+                <form id="registration-form">
+                    <div class="form-group">
+                        <label for="name-agg">Nombre:</label>
+                        <input type="text" class="form-control" id="name-agg" name="name-agg" >
+                    </div>
+                    <div class="form-group">
+                        <label for="email-agg">Correo Electrónico:</label>
+                        <input type="email-agg" class="form-control" id="email-agg" name="email-agg">
+                    </div>
+                    <div class="form-group">
+                        <label for="actividad-agg">Actividad:</label>
+                        <select class="form-control" id="actividad-agg" name="actividad-agg" >
+                            <option value="">Seleccione una actividad</option>
+                            <option value="futbol">Fútbol</option>
+                            <option value="musica">Música</option>
+                        </select>
+                    </div>
+                    <button type="button" onclick="AgregarInscripciones()" class="btn">Inscribirse</button>
+                </form>
+            </div>
+            <!-- Contenedor para mostrar las últimas inscripciones -->
+            <div id="MostrarUltimasInscripciones"></div>
+            <button id="Mostrar1" class="btn" type="button" onclick="MostrarUltimasInscripciones()">Mostrar Últimas Inscripciones</button>
+        </div>
+         <!--seccion para mostrar como administrar-->
+        <div class="items" id="option6" style="display: none;">
+            <h3>¿Cómo administrar?</h3>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4murk6r-ATo?si=e1ULhCjbVhyatB8I"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="admin-info">
+                <h3>Información Básica para Administrar la Página</h3>
+                <p>Esta sección te ofrece información esencial para gestionar eficazmente la página web.</p>
+                <ul>
+                    <li><strong>Accesibilidad:</strong> Asegúrate de que todos los usuarios puedan acceder al contenido de la
+                        página. Usa textos alternativos para imágenes y asegúrate de que la navegación sea clara.</li>
+                    <li><strong>Actualización de Contenidos:</strong> Mantén la información de eventos y noticias actualizada
+                        para que los visitantes siempre encuentren datos relevantes.</li>
+                    <li><strong>Uso de Formularios:</strong> Utiliza formularios claros y sencillos para recopilar información
+                        de los usuarios, asegurando que la validación de datos esté implementada.</li>
+                    <li><strong>Seguridad:</strong> Asegúrate de que la página esté protegida contra ataques. Utiliza HTTPS y
+                        verifica los datos de los formularios para evitar inyecciones SQL.</li>
+                    <li><strong>SEO:</strong> Optimiza tu página para motores de búsqueda usando etiquetas meta adecuadas y
+                        contenido relevante. Esto ayudará a mejorar la visibilidad de tu sitio.</li>
+                    <li><strong>Responsive Design:</strong> Asegúrate de que la página se vea bien en dispositivos móviles y en
+                        diferentes tamaños de pantalla.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Seccion para mostrar las incripciones cragdas del json -->
+    <div class="items" id="option5" style="display:none;">
+        <h3>Inscripciones a Actividades</h3>
+        <p>
+            Por favor, elige una actividad específica para inscribirte. Puedes seleccionar entre "Fútbol" o "Música". A
+            continuación, verás la tabla con las inscripciones actuales.
+        </p>
+    
+        <label for="actividad-select">Selecciona una actividad:</label>
+        <select id="actividad-select" onchange="FiltrarInscripciones()">
+            <option value="todos">Todos</option>
+            <option value="futbol">Fútbol</option>
+            <option value="Musica">Música</option>
+        </select>
+    
+        <table id="inscripciones-table" class="tabla" >
+            <thead>
+                <tr>
+                    <th>Actividad</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se agregarán las filas de inscripciones -->
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+   <div class="pie">
+        <p>Desarrollado por <b>Anderson Lopez Y Maryeris Labiosa</b> | &copy; 2024 Institución Universitaria de Barranquilla. Todos los
+            derechos reservados.</p>
+    </div>
+
+    <script src="../JS/admin.js"></script>
+</body>
+
+</html>

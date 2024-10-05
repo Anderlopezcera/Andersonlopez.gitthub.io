@@ -1,0 +1,32 @@
+.contenido2 {
+    max-width: 800px;
+    /* Establece un ancho máximo para la sección de contenido */
+    margin: 20px auto;
+    /* Centra la sección de contenido */
+    padding: 20px;
+    /* Agrega un poco de espacio alrededor */
+    background-color: white;
+    /* Fondo blanco para destacar el contenido */
+    border-radius: 8px;
+    /* Esquinas redondeadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra suave para un efecto de profundidad */
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+ul {
+    list-style-type: disc;
+    /* Estilo de lista en viñetas */
+    margin: 20px auto;
+    /* Centra la lista */
+    padding-left: 20px;
+    /* Espacio a la izquierda de la lista */
+}

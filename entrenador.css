@@ -1,0 +1,348 @@
+/* Estilo para la tabla */
+#inscripcionesTable {
+    width: 100%;
+    /* Ancho completo */
+    border-collapse: collapse;
+    /* Eliminar espacios entre bordes */
+    margin: 20px 0;
+    /* Espaciado superior e inferior */
+    font-size: 16px;
+    /* Tamaño de fuente */
+    text-align: left;
+    /* Alinear texto a la izquierda */
+}
+
+/* Estilo para los encabezados de la tabla */
+#inscripcionesTable th {
+    background-color: #333;
+    /* Fondo oscuro para encabezados */
+    color: #fff;
+    /* Texto blanco */
+    padding: 12px;
+    /* Espaciado interno */
+}
+
+/* Estilo para las celdas de la tabla */
+#inscripcionesTable td {
+    border: 1px solid #ddd;
+    /* Bordes de las celdas */
+    padding: 12px;
+    /* Espaciado interno */
+}
+
+/* Efecto hover para las filas */
+#inscripcionesTable tr:hover {
+    background-color: #f5f5f5;
+    /* Color de fondo al pasar el mouse */
+}
+
+/* Estilo para filas alternas */
+#inscripcionesTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+    /* Color de fondo para filas pares */
+}
+
+/* Estilo para el contenedor de novedades */
+#novedadesEntrenador {
+    background-color: #f9f9f9;
+    /* Fondo claro */
+    border: 1px solid #ccc;
+    /* Borde gris */
+    border-radius: 8px;
+    /* Esquinas redondeadas */
+    padding: 20px;
+    /* Espaciado interno */
+    margin: 20px 0;
+    /* Espaciado superior e inferior */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+}
+
+/* Título de las novedades */
+#novedadesEntrenador h2 {
+    font-size: 24px;
+    /* Tamaño de fuente del título */
+    color: #333;
+    /* Color del texto */
+    margin-bottom: 15px;
+    /* Espaciado inferior */
+}
+
+/* Estilo para la lista de novedades */
+#listaNovedades {
+    list-style-type: none;
+    /* Elimina los puntos de la lista */
+    padding: 0;
+    /* Elimina el espaciado interno */
+}
+
+/* Estilo para cada ítem de la lista */
+#listaNovedades li {
+    padding: 10px;
+    /* Espaciado interno en cada ítem */
+    border-bottom: 1px solid #eee;
+    /* Línea separadora entre ítems */
+    color: #555;
+    /* Color del texto */
+    transition: background-color 0.3s;
+    /* Transición suave para el fondo */
+}
+
+/* Efecto al pasar el mouse sobre un ítem de la lista */
+#listaNovedades li:hover {
+    background-color: #f1f1f1;
+    /* Fondo más oscuro al pasar el mouse */
+}
+
+/* Estilo para destacar mensajes importantes */
+#listaNovedades li strong {
+    color: #007bff;
+    /* Color azul para los mensajes importantes */
+}
+
+
+/* Estilo general para el contenedor de inscripciones */
+#option3 {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+
+/* Estilo para el formulario */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estilo para los botones */
+button {
+    background-color: #4CAF50;
+    /* Verde */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+    /* Verde más oscuro */
+}
+
+/* Estilo para la lista de inscripciones */
+#listaInscripciones {
+    list-style-type: none;
+    /* Quitar viñetas */
+    padding: 0;
+}
+
+#listaInscripciones li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #e9ecef;
+    /* Color de fondo para los elementos de la lista */
+    border-radius: 4px;
+    display: flex;
+    /* Para alinear el contenido */
+    justify-content: space-between;
+    /* Espacio entre el texto y el botón */
+}
+
+/* Estilo para el botón de eliminar */
+#listaInscripciones button {
+    background-color: #dc3545;
+    /* Rojo */
+    padding: 5px 10px;
+}
+
+#listaInscripciones button:hover {
+    background-color: #c82333;
+    /* Rojo más oscuro */
+}
+
+/* Estilo para la tabla de eventos */
+#EventosTable {
+    width: 100%;
+    /* Ancho completo */
+    border-collapse: collapse;
+    /* Eliminar espacios entre bordes */
+    margin: 20px 0;
+    /* Espaciado superior e inferior */
+    font-size: 16px;
+    /* Tamaño de fuente */
+    text-align: left;
+    /* Alinear texto a la izquierda */
+}
+
+/* Estilo para los encabezados de la tabla de eventos */
+#EventosTable th {
+    background-color: #333;
+    /* Fondo oscuro para encabezados */
+    color: #fff;
+    /* Texto blanco */
+    padding: 12px;
+    /* Espaciado interno */
+}
+
+/* Estilo para las celdas de la tabla de eventos */
+#EventosTable td {
+    border: 1px solid #ddd;
+    /* Bordes de las celdas */
+    padding: 12px;
+    /* Espaciado interno */
+}
+
+/* Efecto hover para las filas de la tabla de eventos */
+#EventosTable tr:hover {
+    background-color: #f5f5f5;
+    /* Color de fondo al pasar el mouse */
+}
+
+/* Estilo para filas alternas de la tabla de eventos */
+#EventosTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+    /* Color de fondo para filas pares */
+}
+
+
+/* Título de los eventos */
+#option4 h1 {
+    font-size: 24px;
+    /* Tamaño de fuente del título */
+    color: #333;
+    /* Color del texto */
+    margin-bottom: 15px;
+    /* Espaciado inferior */
+}
+
+/* Estilos para la sección de agregar eventos */
+#option5 {
+    background-color: #fff;
+    /* Fondo blanco para la sección */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+    padding: 20px;
+    /* Espaciado interno */
+    margin-bottom: 20px;
+    /* Espaciado inferior */
+}
+
+/* Estilos para los encabezados */
+#option5 h1,
+#option5 h2 {
+    color: #333;
+    /* Color de texto oscuro */
+    text-align: center;
+    /* Centrados */
+}
+
+/* Estilos para el formulario de eventos */
+#eventoForm {
+    display: flex;
+    /* Usar flexbox */
+    flex-direction: column;
+    /* Disposición vertical */
+}
+
+/* Estilos para las etiquetas del formulario */
+#eventoForm label {
+    margin-bottom: 5px;
+    /* Espacio debajo de las etiquetas */
+    font-weight: bold;
+    /* Negrita */
+}
+
+/* Estilos para los campos de entrada */
+#eventoForm input[type="text"],
+#eventoForm input[type="date"],
+#eventoForm input[type="time"],
+#eventoForm select {
+    padding: 10px;
+    /* Espaciado interno */
+    margin-bottom: 15px;
+    /* Espacio inferior */
+    border: 1px solid #ccc;
+    /* Borde gris claro */
+    border-radius: 4px;
+    /* Bordes redondeados */
+    font-size: 16px;
+    /* Tamaño de fuente */
+}
+
+/* Estilos para el enfoque de los campos */
+#eventoForm input:focus,
+#eventoForm select:focus {
+    border-color: #007bff;
+    /* Color del borde en foco */
+    outline: none;
+    /* Sin contorno adicional */
+}
+
+/* Estilos para el botón */
+#eventoForm button {
+    padding: 10px;
+    /* Espaciado interno */
+    background-color: #007bff;
+    /* Color de fondo azul */
+    color: white;
+    /* Texto blanco */
+    border: none;
+    /* Sin borde */
+    border-radius: 4px;
+    /* Bordes redondeados */
+    font-size: 16px;
+    /* Tamaño de fuente */
+    cursor: pointer;
+    /* Cambia el cursor al pasar */
+}
+
+/* Estilos para el botón al pasar el cursor */
+#eventoForm button:hover {
+    background-color: #0056b3;
+    /* Color de fondo al pasar el cursor */
+}
+
+/* Estilos para la lista de eventos */
+#listaEventos {
+    list-style-type: none;
+    /* Sin puntos en la lista */
+    padding: 0;
+    /* Sin padding */
+}
+
+/* Estilos para cada elemento de la lista de eventos */
+#listaEventos li {
+    background-color: #f9f9f9;
+    /* Fondo claro para cada evento */
+    border: 1px solid #ddd;
+    /* Borde gris */
+    border-radius: 4px;
+    /* Bordes redondeados */
+    padding: 10px;
+    /* Espaciado interno */
+    margin-bottom: 10px;
+    /* Espacio inferior */
+}

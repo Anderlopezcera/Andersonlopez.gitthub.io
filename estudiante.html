@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiante</title>
+    <link rel="stylesheet" href="../CSS/admin.css">
+    <link rel="stylesheet" href="../CSS/estudiante.css">
+</head>
+
+<body>
+    <header>
+        <h2>Estudiante</h2>
+        <h1>Institución Universitaria de Barranquilla</h1>
+        <div class="welcome-message" id="welcome"></div>
+    </header>
+
+    <div class="menu">
+        <button onclick="showOption(1)">Inicio</button>
+        <button onclick="showOption(2)">Inscribirse</button>
+        <button onclick="showOption(3)">Mi Inscripcion</button>
+        <button onclick="showOption(4)">Ver eventos</button>
+        <button onclick="cerrarSesion()">Cerrar sesion</button>
+    </div>
+
+    <div class="content">
+    <div class="items" id="option1">
+        <h1>Panel del Estudiante</h1>
+        <p>¡Hola, Estudiante! Este es tu panel de control donde podrás gestionar tus inscripciones y ver los eventos
+            disponibles.</p>
+    
+        <p>Desde aquí, podrás:</p>
+        <ul>
+            <li>Ver la lista de eventos disponibles en tu actividad.</li>
+            <li>Ver y gestionar tu inscripción a una actividad.</li>
+            <li>Eliminar tu inscripción si lo deseas.</li>
+            <li>Inscribirte en una nueva actividad.</li>
+        </ul>
+    
+        <button id="btnToggleNovedades" onclick="VerNovedades()" class="btn">Ver Novedades</button>
+    
+        <div id="novedadesEstudianter" style="display:none;">
+            <h2>Novedades de tu Actividad</h2>
+            <ul id="listaNovedades">
+                <!-- Aquí se llenarán las novedades con los últimos eventos -->
+            </ul>
+        </div>
+    </div>
+        <div class="items" id="option2" style="display: none;">
+            <h1>Formulario de Inscripción</h1>
+            <!-- Formulario de inscripción -->
+            <form id="inscripcionForm">
+                 <!-- Campo de correo deshabilitado -->
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" required placeholder="Ingresa tu correo" disabled>
+                <!-- Campo de nombre deshabilitado -->
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre" disabled>
+
+                <!-- Select para elegir actividad -->
+                <label for="actividad">Actividad:</label>
+                <select id="actividad" name="actividad" required>
+                    <option value="futbol">Fútbol</option>
+                    <option value="musica">Música</option>
+                </select>
+    
+
+                <!-- Campo de fecha -->
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                <!-- Botón de inscripción -->
+                <button type="button" onclick="InscripcionEstudiante()">Inscribirse</button>
+            </form>
+        </div>
+
+        <div class="items" id="option3" style="display: none;">
+            <h1>Inscripciones</h1>
+        
+            <!-- Tabla para mostrar las inscripciones -->
+            <table id="tablaInscripciones">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Fecha</th>
+                        <th>Actividad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="listaInscripciones">
+                    <!-- Las inscripciones se llenarán aquí dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+
+      <div class="items" id="option4" style="display: none;">
+        <h2>Eventos de la Actividad Inscrita</h2>
+        <table id="tablaEventos">
+            <thead>
+                <tr>
+                    <th>Nombre del Evento</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Ubicación</th>
+                </tr>
+            </thead>
+            <tbody id="listaEventos">
+                <!-- Aquí se llenarán los eventos filtrados -->
+            </tbody>
+        </table>
+    </div>
+    
+
+
+    </div>
+
+    <footer class="pie">
+        <p>Desarrollado por <b>Anderson Lopez Y Maryeris Labiosa</b> | &copy; 2024 Institución Universitaria de
+            Barranquilla.
+            Todos los
+            derechos reservados.</p>
+    </footer>
+    </footer>
+
+    <script src="../JS/estudiante.js"></script>
+
+</html>

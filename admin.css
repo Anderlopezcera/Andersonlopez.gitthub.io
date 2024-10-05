@@ -1,0 +1,212 @@
+body {
+    background-color: #eaeef1;
+    /* Color de fondo */
+    color: black;
+    /* Color de letra */
+    font-family: Arial;
+    /* Tipo de letra */
+    margin: 0;
+    /* Para que los contenedores ocupen toda la página */
+}
+
+header {
+    text-align: center;
+    background-color: #042a50;
+    /* Fondo oscuro */
+    color: white;
+    /* Texto blanco */
+    padding: 20px;
+    /* Espaciado */
+    width: 100%;
+}
+
+.welcome-message {
+    font-size: 20px;
+}
+
+.items {
+    margin: 20px auto;
+    padding: 15px;
+    width: 80%;
+    max-width: 600px;
+    /* Ancho máximo del contenedor */
+    text-align: center;
+    /* Centrar texto */
+    border-radius: 8px;
+}
+
+h1 {
+    margin-bottom: 15px;
+    /* Espacio inferior */
+}
+
+ul {
+    list-style-type: none;
+    /* Quitar viñetas de la lista */
+    padding: 0;
+    /* Quitar espaciado */
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #042a50;
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
+.menu button  , .btn{
+    color: white; 
+    background-color: #042a50; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+.menu button:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+.pie {
+    text-align: center;
+    border: 2px solid #042a50;
+    background-color: #042a50;
+    color: white;
+}
+
+#event-form,
+#form-container {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h4 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    /* Tamaño de fuente uniforme */
+    color: #555;
+}
+
+input,
+select,
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+#event-table,
+#inscripciones-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#event-table th,
+#inscripciones-table th {
+    background-color: #343a40;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #dee2e6;
+}
+
+#event-table td,
+#inscripciones-table td {
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    text-align: left;
+}
+
+#event-table tr:hover,
+#inscripciones-table tr:hover {
+    background-color: #f1f1f1;
+    /* Color de fondo al pasar el ratón */
+}
+
+#event-table tbody tr:nth-child(odd),
+#inscripciones-table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+    /* Color alternativo para filas */
+}
+
+#actividad-select {
+    margin: 10px 0;
+    /* Espaciado superior e inferior */
+}
+
+#MostrarUltimosEventos , #MostrarUltimasInscripciones {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-width: 600px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#MostrarUltimosEventos div , #MostrarUltimasInscripciones div {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    /* Tamaño de fuente más pequeño */
+}
+
+.btn1 {
+    padding: 8px 16px;
+    margin: 10px 0;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.btnEliminar {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btnEliminar:hover {
+    background-color: #45a049;
+    /* Color de fondo más oscuro al pasar el mouse */
+}

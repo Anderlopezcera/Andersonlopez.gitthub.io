@@ -1,0 +1,65 @@
+.contenido {
+    max-width: 400px;
+    /* Ancho máximo del formulario */
+    margin: 20px auto;
+    /* Centrando el formulario */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    /* Fondo blanco para el formulario */
+}
+
+h2 {
+    text-align: center;
+    color: #042a50;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    /* Espaciado entre los campos del formulario */
+}
+
+label {
+    display: block;
+    /* Mostrar etiquetas como bloques */
+    margin-bottom: 5px;
+    /* Espaciado debajo de las etiquetas */
+    color: #042a50;
+    /* Color del texto */
+}
+
+input {
+    width: 100%;
+    /* Ancho completo */
+    padding: 10px;
+    /* Espaciado interno */
+    border: 1px solid #ccc;
+    /* Borde gris */
+    border-radius: 4px;
+    /* Bordes redondeados */
+}
+
+button {
+    width: 100%;
+    /* Ancho completo del botón */
+    padding: 10px;
+    /* Espaciado interno */
+    background-color: #042a50;
+    /* Color de fondo del botón */
+    color: white;
+    /* Color del texto */
+    border: none;
+    /* Sin borde */
+    border-radius: 4px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s;
+    /* Transición para el efecto hover */
+}
+
+button:hover {
+    background-color: #031e30;
+    /* Color del botón al pasar el mouse */
+}

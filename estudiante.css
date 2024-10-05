@@ -1,0 +1,222 @@
+/* Estilos generales para el formulario con identificador #inscripcionForm */
+#inscripcionForm {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Estilos para los campos de entrada dentro del formulario #inscripcionForm */
+#inscripcionForm label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#inscripcionForm input,
+#inscripcionForm select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos para campos deshabilitados */
+#inscripcionForm input[disabled] {
+    background-color: #e9e9e9;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* Estilos para el botón de envío dentro del formulario #inscripcionForm */
+#inscripcionForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#inscripcionForm button:hover {
+    background-color: #218838;
+}
+
+/* Estilo para el título del formulario con identificador #inscripcionForm */
+#inscripcionForm h1 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la tabla de inscripciones */
+#tablaInscripciones {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+#tablaInscripciones th,
+#tablaInscripciones td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+#tablaInscripciones th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+#tablaInscripciones tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#tablaInscripciones tr:hover {
+    background-color: #f1f1f1;
+}
+
+#tablaInscripciones button {
+    padding: 5px 10px;
+    background-color: #ff5e5e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#tablaInscripciones button:hover {
+    background-color: #ff3e3e;
+}
+
+/* Estilos para la tabla de inscripciones */
+#inscripcionesTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#inscripcionesTable th,
+#inscripcionesTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#inscripcionesTable th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+#inscripcionesTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#inscripcionesTable tr:hover {
+    background-color: #ddd;
+}
+
+/* Estilos para la tabla de eventos */
+#tablaEventos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#tablaEventos th,
+#tablaEventos td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#tablaEventos th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+#tablaEventos tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#tablaEventos tr:hover {
+    background-color: #ddd;
+}
+
+/* Estilos generales */
+#tablaContainer {
+    margin: 20px 0;
+}
+
+#tablaContainer h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Estilos para el contenedor de novedades */
+#novedadesEstudianter {
+    background-color: #f9f9f9;
+    /* Color de fondo claro */
+    border: 1px solid #ddd;
+    /* Borde gris claro */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    padding: 20px;
+    /* Espaciado interno */
+    margin: 20px 0;
+    /* Margen vertical */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+}
+
+/* Estilo para el encabezado de novedades */
+#novedadesEstudianter h2 {
+    color: #333;
+    /* Color del texto del encabezado */
+    font-size: 24px;
+    /* Tamaño de fuente */
+    margin-bottom: 15px;
+    /* Espaciado inferior */
+}
+
+/* Estilos para la lista de novedades */
+#listaNovedades {
+    list-style-type: none;
+    /* Sin viñetas */
+    padding: 0;
+    /* Sin espaciado interno */
+}
+
+/* Estilo para los elementos de la lista */
+#listaNovedades li {
+    background-color: #fff;
+    /* Fondo blanco */
+    border: 1px solid #ddd;
+    /* Borde gris claro */
+    border-radius: 3px;
+    /* Bordes redondeados */
+    padding: 10px;
+    /* Espaciado interno */
+    margin-bottom: 10px;
+    /* Margen entre elementos */
+    transition: background-color 0.3s;
+    /* Efecto de transición para el hover */
+}
+
+/* Efecto hover para los elementos de la lista */
+#listaNovedades li:hover {
+    background-color: #f1f1f1;
+    /* Color de fondo al pasar el mouse */
+}
+
+/* Estilo para texto fuerte dentro de la lista */
+#listaNovedades li strong {
+    color: #007bff;
+    /* Color azul para el texto fuerte */
+}

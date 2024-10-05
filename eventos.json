@@ -1,0 +1,30 @@
+[
+    {
+        "fecha": "2024-10-01",
+        "hora": "17:00",
+        "nombre": "Partido de fútbol amistoso",
+        "ubicacion": "Estadio Municipal",
+        "actividad": "futbol"
+    },
+    {
+        "fecha": "2024-10-02",
+        "hora": "19:30",
+        "nombre": "Entrenamiento de fútbol",
+        "ubicacion": "Campo Deportivo",
+        "actividad": "futbol"
+    },
+    {
+        "fecha": "2024-10-03",
+        "hora": "20:00",
+        "nombre": "Concierto de música clásica",
+        "ubicacion": "Teatro Nacional",
+        "actividad": "Musica"
+    },
+    {
+        "fecha": "2024-10-04",
+        "hora": "18:00",
+        "nombre": "Ensayo de banda musical",
+        "ubicacion": "Sala de Ensayo",
+        "actividad": "Musica"
+    }
+]

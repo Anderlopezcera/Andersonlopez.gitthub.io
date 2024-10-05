@@ -1,0 +1,44 @@
+[
+    {
+        "actividad": "futbol",
+        "nombre": "Juan Pérez",
+        "correo": "juan.perez@example.com",
+        "fecha": "2024-10-05"
+    },
+    {
+        "actividad": "futbol",
+        "nombre": "Anderson lopez",
+        "correo": "estudiante1@universidad.edu.co",
+        "fecha": "2024-10-05"
+    },
+    {
+        "actividad": "futbol",
+        "nombre": "Ana García",
+        "correo": "ana.garcia@example.com",
+        "fecha": "2024-10-06"
+    },
+    {
+        "actividad": "Musica",
+        "nombre": "Luis Rodríguez",
+        "correo": "luis.rodriguez@example.com",
+        "fecha": "2024-10-07"
+    },
+    {
+        "actividad": "Musica",
+        "nombre": "Maryeris labiosa",
+        "correo": "estudiante2@universidad.edu.co",
+        "fecha": "2024-10-08"
+    },
+    {
+        "actividad": "futbol",
+        "nombre": "Carlos Martínez",
+        "correo": "carlos.martinez@example.com",
+        "fecha": "2024-10-09"
+    },
+    {
+        "actividad": "Musica",
+        "nombre": "Sofía Jiménez",
+        "correo": "sofia.jimenez@example.com",
+        "fecha": "2024-10-10"
+    }
+]

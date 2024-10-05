@@ -1,0 +1,36 @@
+[
+    {
+        "email": "admin@universidad.edu.co",
+        "nombre": "Maria Conde",
+        "password": "admin123",
+        "role": "administrador"
+    },
+    {
+        "email": "estudiante2@universidad.edu.co",
+        "nombre": "Maryeris labiosa",
+        "password": "estudiante123",
+        "role": "estudiante",
+        "inscrito": "Musica"
+    },
+    {
+        "email": "estudiante1@universidad.edu.co",
+        "nombre": "Anderson Lopez",
+        "password": "estudiante123",
+        "role": "estudiante",
+        "inscrito": "futbol"
+    },
+    {
+        "email": "entrenador1@universidad.edu.co",
+        "nombre": "Arturo Reyes",
+        "password": "entrenador123",
+        "role": "entrenador",
+        "actividad": "futbol"
+    },
+    {
+        "email": "entrenador2@universidad.edu.co",
+        "nombre": "Scaloni Quezada",
+        "password": "entrenador123",
+        "role": "entrenador",
+        "actividad": "musica"
+    }
+]
